@@ -13,6 +13,3 @@ def get_hash_list():
         lines_list = hash_file.read().splitlines()
 
         print(lines_list)
-
-
-get_hash_list()
