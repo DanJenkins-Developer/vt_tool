@@ -12,4 +12,5 @@ def get_hash_list():
     with open(f_path, "r") as hash_file:
         lines_list = hash_file.read().splitlines()
 
-        print(lines_list)
+        # print(lines_list)
+    return lines_list

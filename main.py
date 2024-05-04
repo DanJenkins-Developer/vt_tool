@@ -6,15 +6,18 @@ from testing import file_test
 
 load_dotenv()
 
-file_test.get_hash_list()
+hashes = file_test.get_hash_list()
+query_string = "/files/" + hashes[1]
 
-# vt_api_key = os.getenv('VT_API_KEY')
+print(query_string)
 
-# client = vt.Client(vt_api_key)
+vt_api_key = os.getenv('VT_API_KEY')
 
-# # file attributes at https://docs.virustotal.com/reference/files
-# file = client.get_object("/files/44d88612fea8a8f36de82e1278abb02f")
+client = vt.Client(vt_api_key)
 
-# print(file.size)
+# file attributes at https://docs.virustotal.com/reference/files
+file = client.get_object(query_string)
 
-# client.close()
+print(file.names)
+
+client.close()
