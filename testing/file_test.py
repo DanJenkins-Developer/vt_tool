@@ -3,10 +3,16 @@ import csv
 # f_path = str(
 #     input("Enter the path to a .txt or .csv file containing hashes :: "))
 
-test_f_path = "C:\\Users\\skydr\\Documents\\Development\\vt_tool\\testing\\test.txt"
-f_path = test_f_path
+
+def get_hash_list():
+
+    test_f_path = "C:\\Users\\skydr\\Documents\\Development\\vt_tool\\testing\\test.txt"
+    f_path = test_f_path
+
+    with open(f_path, "r") as hash_file:
+        lines_list = hash_file.read().splitlines()
+
+        print(lines_list)
 
 
-file = open(f_path, 'r')
-print(file.read())
-file.close()
+get_hash_list()
