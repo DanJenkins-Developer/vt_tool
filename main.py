@@ -21,3 +21,9 @@ file = client.get_object(query_string)
 print(file.names)
 
 client.close()
+
+
+# User uploads file
+# Program parses out all the hashes
+# Program uses the api client to look up all the hashes
+# Information is displayed to the user graphically
